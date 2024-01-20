@@ -28,11 +28,63 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signature-canvas{
+  border:1px solid grey;
+  padding-bottom:10px
+}
+.text-area{
+  border:1px solid grey;
+  padding-bottom:10px;
+  font-size: 30px;
+  width: 600px;
+  height: 180px;
+}
+.content{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.preview{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  row-gap: 25px;
+}
+.action{
+  width: 79%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  column-gap: 25px;
+}
+.radio{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-check-label1 {
+  font-family: 'Monotype Corsiva', cursive;/* Specify the desired font */
+  font-size: 30px; /* Specify the desired font size */
+  font-weight: bold; /* Specify the desired font weight */
+}
+
+.form-check-label2 {
+  font-family: 'Holligate Signature Demo', cursive;
+  font-size: 30px; /* Specify the desired font size */
+  font-weight: bold; /* Specify the desired font weight */
+}
+.form-check-label3 {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 30px; /* Specify the desired font size */
+  font-weight: bold; /* Specify the desired font weight */
+}
+.form-check-label4 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px; /* Specify the desired font size */
+  font-weight: bold; /* Specify the desired font weight */
 }

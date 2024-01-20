@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from "react";
+import "react-tabs/style/react-tabs.css";
+import "./App.css";
+import ModalComponent from "./components/ModalComponent";
 
-function App() {
+// Main App component
+const App = () => {
+  // State to manage the modal's open/closed state
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+  // Function to close the modal
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  // Render the App component
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* ModalComponent is rendered with isOpen and closeModal props */}
+      <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} />
     </div>
   );
-}
+};
 
+// Export the App component as the default export
 export default App;
