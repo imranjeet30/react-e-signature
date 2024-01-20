@@ -1,11 +1,13 @@
 
 # Run npm install
 
-#Click on Sign button
-#A popup will be opened with two option Draw & Type
-#Draw - Draw signature & click on Done & Signature Preview will be displayed
-#Type - Write Text & click on done & signature preview will be visible
-#Choose radio option for different font style signature
+- Execute npm install for initial setup
+- Click on the Sign button to initiate the signing process
+- A popup window will appear, offering two options: Draw and Type
+- Under Draw, create a signature and click Done to view the Signature Preview
+- Under Type, write text and click Done to preview the signature
+- Select a radio option to choose from different font styles for the signature
+- Use npm test to run the testing process
 
 # Run npm test for testing
 
