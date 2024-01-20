@@ -62,12 +62,12 @@ const SignatureAction = ({ signaturePadRef, onSignatureChange, type, setText }) 
   return (
     <div className='action'>
       {/* Button to clear the signature */}
-      <Button variant='secondary' onClick={handleClear}>
+      <Button variant='primary' onClick={handleClear}>
         Clear
       </Button>
 
       {/* Button to save the signature */}
-      <Button variant='primary' onClick={handleSave}>
+      <Button variant='success' onClick={handleSave}>
         Done
       </Button>
     </div>

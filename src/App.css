@@ -54,7 +54,9 @@
   margin-top: 20px;
   flex-direction: column;
   row-gap: 25px;
+  background-color: #f5f5dc;
 }
+
 .action{
   width: 79%;
   display: flex;

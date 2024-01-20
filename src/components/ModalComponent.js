@@ -82,52 +82,66 @@ function ModalComponent() {
   // Render the component
   return (
     <>
-      <Container style={{ marginTop: "20px" }}>
+      <Container
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
         {/* Button to open the modal */}
-        <Button variant='primary' onClick={handleShow}>
-          Sign
+        <p style={{fontFamily: 'poppins', fontSize:"40px"}}>
+          Click to Sign
+        </p>
+        <Button variant="success" size="lg" onClick={handleShow}>
+          Sign Document
         </Button>
 
         {/* Modal component */}
-        <Modal show={show} onHide={handleClose} size='lg'>
-          <Modal.Header closeButton>
-            <Modal.Title>Add Signature</Modal.Title>
+        <Modal show={show} onHide={handleClose} size="lg">
+          <Modal.Header closeButton  style={{background: 'linear-gradient(to right, #f5f5dc, #f5f5dc)'}}>
+            <Modal.Title style={{display:"flex", justifyContent:"center", width:"100%"}}>Add Signature</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body style={{background:"#f5f5dc"}}>
             <div>
               {/* Tabs for Draw and Type */}
-              <Tabs onSelect={handleTabSwitch}>
+              <Tabs onSelect={handleTabSwitch} focusTabOnClick={false}>
                 <TabList>
-                  <Tab>Draw</Tab>
-                  <Tab>Type</Tab>
+                  <Tab style={{background:'#f5f5dc'}}>Draw</Tab>
+                  <Tab style={{background:'#f5f5dc'}}>Type</Tab>
                 </TabList>
 
                 {/* Panels for Draw and Type */}
-                <TabPanel>
-                  <SignatureInput onSignatureChange={handleSignatureChange} />
+                <TabPanel >
+                  <SignatureInput onSignatureChange={handleSignatureChange}/>
                 </TabPanel>
                 <TabPanel>
-                  <TextArea setText={setText} onSignatureChange={handleSignatureChange} />
+                  <TextArea
+                    setText={setText}
+                    onSignatureChange={handleSignatureChange}
+                  />
                 </TabPanel>
               </Tabs>
             </div>
-            <div id='hiddenItem'></div>
+            <div id="hiddenItem"></div>
 
             {/* Signature Preview */}
-            <div className='preview'>
+            <div className="preview">
               <h2>Signature Preview</h2>
-              {signature && <img src={signature} alt='Signature' />}
+              {signature && <img src={signature} alt="Signature" style={{border: '1px solid black'}}/>}
               {text && (
-                <Form className='radio'>
+                <Form className="radio">
                   {/* Radio buttons for font selection */}
                   {[1, 2, 3, 4].map((option) => (
                     <Form.Check
                       key={option}
-                      type='radio'
+                      type="radio"
                       className={`form-check-label${option}`}
                       aria-label={`option ${option}`}
                       label={text}
-                      name='radioGroup'
+                      name="radioGroup"
                       value={option}
                       checked={selectedOption === option.toString()}
                       onChange={handleRadioChange}
@@ -137,9 +151,9 @@ function ModalComponent() {
               )}
             </div>
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer style={{background:'#f5f5dc'}}>
             {/* Close button */}
-            <Button variant='secondary' onClick={handleClose}>
+            <Button variant="danger" onClick={handleClose}>
               Close
             </Button>
           </Modal.Footer>

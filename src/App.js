@@ -16,7 +16,7 @@ const App = () => {
 
   // Render the App component
   return (
-    <div>
+    <div style={{backgroundColor: '#7B562C', width:"100%", height: '100vh', background: 'linear-gradient(to right, #ff6f61, #a2d5c6)'}}>
       {/* ModalComponent is rendered with isOpen and closeModal props */}
       <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} />
     </div>
