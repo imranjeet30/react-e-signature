@@ -10,4 +10,8 @@
 - Use npm test to run the testing process
 
 # Run npm test for testing
+![DrawSignature](screenshots/FirstScreen.png)
+![DrawSignature](screenshots/Draw sign.png)
+![DrawSignature](screenshots/draw2.png)
+![DrawSignature](screenshots/type.png)
 
